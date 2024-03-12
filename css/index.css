@@ -375,6 +375,8 @@ cursor: pointer;
             transition: var(--transition);}
              .is-hidden{
                 visibility: hidden;
+                transform: scale(1.1);
+                display: none;
              }        
     .modal{
                 position: fixed;
