@@ -12,6 +12,7 @@
     --dairy-color:#fcfcfc;
     --second-family:"Raleway",sans-serif;
     --fond-family:"Roboto", sans-serif;
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 *,
 ::before,
@@ -63,15 +64,7 @@ a {
     height: 72px;
 }
 
-.studio-hover:hover,
-.studio-hover::after{
-    display: flex;
-    align-items: center;
-    height: 72px;
-    padding-top: 4px;
-    border-bottom: 4px solid var(--ocean-color);
-    border-radius: 2px;
-}
+
 .global-header .main-nav a{
 text-transform: uppercase;
 font-weight: 500;
@@ -79,11 +72,17 @@ font-size: 16px;
 line-height: 1.5em; 
 color: var(--navy-blue-color); 
 }
+.global-header a.active {
+    padding-bottom: 22px;
+    border-bottom: 4px solid var(--iris-color);
+    border-radius: 2px;
+    color: var(--iris-color);
 
+}
 .global-header .main-nav a:hover,
 .global-header .social-div a:hover{
     color: var(--iris-color);
-transition-duration: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: var(--transition);
 }
 .global-header .social-div a{
     padding-left: 40px;
@@ -119,6 +118,7 @@ transition-duration: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .first-section .order-button:hover{
     background-color: var(--white-color);
     color: var(--iris-color);
+    transition: var(--transition);
     
 }
 .first-section .order-button{
@@ -231,6 +231,7 @@ cursor: pointer;
 .icons-fourth-section .icon:hover{
     background-color: var(--cloud-color);
     color:var(--iris-color) ;
+    transition: var(--transition);
 }
 .fourth-section h3{
     font-weight: 500;
@@ -298,7 +299,7 @@ cursor: pointer;
     color:var(--iris-color) ;
     border-color: var(--iris-color);
     cursor: pointer;
-}
+    transition: var(--transition);}
 .icons-fifth-section svg{
     justify-content: center;
     width: 104px;
@@ -370,7 +371,8 @@ cursor: pointer;
     }
     .icons-global-footer .icon:hover {
              background-color: var(--cloud-color);
-             color: var(--iris-color);}
+             color: var(--iris-color);
+            transition: var(--transition);}
              .is-hidden{
                 visibility: hidden;
              }        
